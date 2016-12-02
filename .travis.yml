@@ -1,0 +1,18 @@
+language: java
+jdk:
+- oraclejdk8
+sudo: false
+script: mvn clean package
+before_deploy:
+- export SRC_JAR=target/uadataparser.jar
+- export OUT_JAR=target/uadataparser-$TRAVIS_TAG.jar
+- mv $SRC_JAR $OUT_JAR
+deploy:
+  file_glob: true
+  provider: releases
+  skip_cleanup: true
+  api_key: $SECURITY_KEY
+  file: $OUT_JAR
+  on:
+    repo: mishkinstvo/DataGovUaParser
+    tags: true
