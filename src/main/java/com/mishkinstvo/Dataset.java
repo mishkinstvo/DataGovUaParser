@@ -79,8 +79,7 @@ public class Dataset {
 	}
 	
 	public void setId(String id) {
-		// Brutal fix of stupid id values in url
-		this.id = id.trim().substring(0, 36);
+		this.id = id;
 	}
 	
 	public String getRevisionId() {

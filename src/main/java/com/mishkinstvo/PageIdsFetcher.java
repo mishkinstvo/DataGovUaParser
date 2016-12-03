@@ -37,7 +37,10 @@ public final class PageIdsFetcher implements Erroneous<List<String>> {
 		Elements datasetElements = doc.select(optionsStorage.getSelector());
 		
 		for (Element element : datasetElements) {
-			ids.add(element.attr("href").split("/")[2]);
+			String unformatted = element.attr("href").split("/")[2];
+			String trimmed = unformatted.trim().substring(0, 36);
+			LOG.debug("Datastore ID was fetched. Unformatted: {}, trimmed: {}", unformatted, trimmed);
+			ids.add(trimmed);
 		}
 		
 		LOG.debug("Parsing page with url {} was successfully finished. Parsed {} ids", optionsStorage.getPageUrl(page), ids.size());
