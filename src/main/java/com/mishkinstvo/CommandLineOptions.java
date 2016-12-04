@@ -4,6 +4,7 @@ import org.apache.commons.cli.Option;
 
 public enum CommandLineOptions {
 	STARTING_PAGE("sp", "starting-page", true, "Number of the page, from which parsing will be started", "0"),
+	ENDING_PAGE("ep", "ending-page", true, "Number of the page, which will be parsed last", "-1"),
 	SELECTOR("s", "selector", true, "DOM path to dataset HTML element", "div.top.views-fieldset div.views-field-field-big-title a"),
 	USER_AGENT("ua", "user-agent", true, "User agent, specified in connection header", "Mozilla/5.0 (Windows; U; WindowsNT 5.1; en-US; rv1.8.1.6) Gecko/20070725 Firefox/2.0.0.6"),
 	CONNECTION_TIMEOUT("ct", "connection-timeout", true, "HTTP connection timeout, milliseconds", "12000"),

@@ -25,6 +25,7 @@ public class Init {
 		
 		LOG.debug("Application execution started");
 		LOG.debug("Starting page: {}", optionsStorage.getStartingPage());
+		LOG.debug("Ending page: {}", optionsStorage.getEndingPage());
 		LOG.debug("URL: {}", optionsStorage.getUrl());
 		LOG.debug("Output CSV path: {}", optionsStorage.getOutputPath());
 		

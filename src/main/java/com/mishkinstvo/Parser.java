@@ -39,6 +39,11 @@ public class Parser {
 		int page = optionsStorage.getStartingPage();
 		
 		for (int parsed = 1; parsed > 0; page++) {
+			if (page > -1 && page > optionsStorage.getEndingPage()) {
+				LOG.debug("Last page was parsed.");
+				break;
+			}
+			
 			parsed = parsePage(page);
 			total += parsed;
 		}

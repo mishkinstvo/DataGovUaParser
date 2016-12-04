@@ -32,6 +32,10 @@ public class OptionsStorage {
 		return Integer.parseInt(getOption(CommandLineOptions.STARTING_PAGE));
 	}
 	
+	public Integer getEndingPage() {
+		return Integer.parseInt(getOption(CommandLineOptions.ENDING_PAGE));
+	}
+	
 	public String getPageUrl(int page) {
 		StringBuilder sb = new StringBuilder(getUrl());
 		sb.append(page);
