@@ -18,9 +18,15 @@
 * [How to Build it](#how-to-build-it)
 
 ## How to Run it
-You need to have 'JRE >= 1.8' installed on your machine. The minimum required command to execute the parser is:
+You need to have `JRE >= 1.8` installed on your machine. The minimum required command to execute the parser is:
 ``` console
-java -jar <path_to_jar_file>.jar
+java -jar <app_name>.jar
+```
+It is highly advisable to customize the parsing cycle by using different command line options:
+``` console
+usage: java -jar <app_name>.jar [-ct <arg>] [-dsl <arg>] [-dst <arg>]
+       [-dsu <arg>] [-h] [-maxmst <arg>] [-minmst <arg>] [-o <arg>] [-s
+       <arg>] [-sp <arg>] [-u <arg>] [-ua <arg>]
 ```
 
 ## How to Build it
