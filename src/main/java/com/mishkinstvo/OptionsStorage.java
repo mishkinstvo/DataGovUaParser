@@ -33,7 +33,11 @@ public class OptionsStorage {
 	}
 	
 	public Integer getEndingPage() {
-		return Integer.parseInt(getOption(CommandLineOptions.ENDING_PAGE));
+		int page = Integer.parseInt(getOption(CommandLineOptions.ENDING_PAGE));
+		if (page < 0) {
+			return Integer.MAX_VALUE;
+		}
+		return page;
 	}
 	
 	public String getPageUrl(int page) {
